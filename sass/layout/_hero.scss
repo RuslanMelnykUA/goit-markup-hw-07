@@ -1,0 +1,16 @@
+.page-hero {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/bg.jpg");
+  background-color: #c4c4c4;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+.page-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 200px 0;
+}
