@@ -1,18 +1,16 @@
-.background-footer {
+.page-footer {
   background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  /* display: flex;
-  align-items: center; */
 }
-.footer-wrap {
+.page-footer__container {
   display: flex;
   align-items: baseline;
 }
 .address-footer-wrap {
   margin-right: 70px;
 }
-.logo-footer {
+.page-footer__logo {
   display: block;
   padding-bottom: 20px;
 }
@@ -22,9 +20,7 @@
 .location,
 .contact-mail-footer,
 .contact-phone-number-footer {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
 }
@@ -32,20 +28,15 @@
 .contact-phone-number-footer {
   color: rgba(255, 255, 255, 0.6);
 }
-address {
-  font-style: normal;
-}
 .location,
 .contact-mail-footer {
   display: block;
   margin-bottom: 9px;
 }
-.join {
+.social-footer-wrap {
   margin-bottom: 20px;
   font-family: var(--primary-font);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font();
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-dark);
@@ -60,25 +51,21 @@ address {
   display: flex;
   flex-direction: column;
 }
-.sign-mail {
+.sign-mail-content__mail {
   margin-bottom: 20px;
   font-family: inherit;
   font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font();
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-text-color-theme-dark);
 }
-.sign-mail-form {
+.sign-mail-content__form {
   width: 360px;
   height: 50px;
   padding-left: 16px;
   font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.25;
+  @include font(16px, 400, 20px);
   letter-spacing: 0.03em;
   color: var(--modal-btn-color-portfolio);
   background-color: #2f303a;
@@ -86,55 +73,8 @@ address {
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
   transition: border-color var(--transition-dur-and-func);
-}
-.sign-mail-form:focus {
-  border-color: var(--accent-color);
-  outline: none;
-}
-.sign-form-button {
-  padding: 10px 29px;
-  max-width: 200px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  border: none;
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  color: var(--primary-text-color-theme-dark);
-  transition: background-color var(--transition-dur-and-func);
-}
-.submit-mail-icon {
-  margin-left: 0px;
-}
-.join-social-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-.social-link-footer {
-  background-color: rgba(255, 255, 255, 0.1);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color var(--transition-dur-and-func),
-    fill var(--transition-dur-and-func);
-}
-.social-link-footer:hover,
-.social-link-footer:focus {
-  background-color: var(--accent-color);
-}
-.social-link-footer:hover .social-icon-footer,
-.social-link-footer:focus .social-icon-footer {
-  fill: var(--primary-text-color-theme-dark);
-}
-.social-icon-footer {
-  fill: var(--primary-text-color-theme-dark);
+  &:focus {
+    border-color: var(--accent-color);
+    outline: none;
+  }
 }

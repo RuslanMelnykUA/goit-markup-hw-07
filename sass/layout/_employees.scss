@@ -7,17 +7,13 @@
   gap: 30px;
 }
 .employees-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(16px, 500, 19px);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-light);
 }
 .employees-job {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.19;
+  @include font(16px, 400, 19px);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color-theme-light);
@@ -40,24 +36,22 @@
   gap: 10px;
 }
 .employees-social-link {
+  @extend %align;
   background-color: var(--primary-text-color-theme-dark);
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition: background-color var(--transition-dur-and-func),
     fill var(--transition-dur-and-func);
-}
-.employees-social-link:hover,
-.employees-social-link:focus {
-  background-color: var(--accent-color);
-}
-.employees-social-link:hover .employees-social-icon,
-.employees-social-link:focus .employees-social-icon {
-  fill: var(--primary-text-color-theme-dark);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 .employees-social-icon {
   fill: var(--icon-color);
+  .employees-social-link:hover &,
+  .employees-social-link:focus & {
+    fill: var(--primary-text-color-theme-dark);
+  }
 }

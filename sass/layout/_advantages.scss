@@ -12,9 +12,7 @@
   flex-direction: column;
 }
 .advantages-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %align;
   width: 270px;
   height: 120px;
   border-radius: 4px;
@@ -27,9 +25,7 @@
 }
 
 .description-advantages {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: var(--secondary-text-color-theme-light);
 }
